@@ -119,7 +119,7 @@ Again, search for "Atmega88p". If it can be found, all is well and you don't hav
    <Fuse name="UNUSED_E7" bit="7" ...
 
 ```
-Copy the whole block (everything between `<AVR name="m88" ... ` and `</AVR>`) and change the first line to 
+Copy the whole block (everything between `<AVR name="m88" ... ` and `</AVR>`) and change the first line to
 ```
 <AVR name="m88p" caption="ATmega88p">
 ```
@@ -207,6 +207,8 @@ Start FT\_PROG and connect the USB board to your computer via its USB connector.
 ![](./Pictures/100000000000027E000002E44015521B.png)
 
 Eventually after a few retries you get this. Go to the "SerialNumber" tab and untick "Auto Generate Serial No:". Now you can edit the "serial number" field. Enter a serial number like in the image above. It should start with an "m" and the numbers after that are irrelevant, but I found that they should be 7 digits long. They represent the "unique number" of your device. If you have other monomes, be sure that you use a different serial number that the one of your other devices. Also change the manufacturer to "monome" and the Product description to "arc", this is important for compatibility with monome eurorack modules, the Aleph and Norns. Once you’re done, click the flash symbol and program the new settings to the chip.
+
+If you have trouble getting this to work (some people had issues with obscure connection errors), you can try the linux path (see below) from a linux computer or even a Monome Norns. For the latter, you can log onto the Norns via SSH with `ssh we@norns.local` to execute the commands.
 
 ![](./Pictures/1000020100000240000001841124B28B.png)
 
